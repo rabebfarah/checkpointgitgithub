@@ -1,0 +1,32 @@
+ALGORITHME word-sentence
+
+VAR
+length:integer:=0;
+word:integer:=0;
+voyelle:integer:=0;
+sentence:string:='the number of word.';
+i:integer:=0;
+
+BEGIN
+WHILE(sentence[i]not '.' AND sentence NOT NULL)DO
+ length+=1;
+
+ IF (sentence[i]=' ')
+    THEN word+=1;
+ END-IF
+
+ IF (sentence[i]='e' OR sentence[i]='a' OR sentence[i]='i' OR sentence[i]='u' 
+     OR sentence[i]='o' )
+    THEN voyelle+=1;
+END-IF
+
+    i++
+
+END-WIHLE
+
+length+=1;
+word+=1;
+write(length)
+write(word)
+write(voyelle)
+END
